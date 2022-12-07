@@ -66,7 +66,7 @@ def run_client(ready: Event) -> None:
         reader << sock.recv(1024)
 
         if not reader.is_complete():
-            print(f"client failed to received response from server")
+            print("client failed to received response from server")
             return
 
         response = reader.build()
